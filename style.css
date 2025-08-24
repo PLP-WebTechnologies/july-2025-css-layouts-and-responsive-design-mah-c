@@ -1,0 +1,118 @@
+/* Reset & base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 0 1rem;
+}
+
+/* Header & Navigation - Flexbox */
+header {
+  background-color: burlywood;
+  color: #fff;
+  padding: 1rem;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+}
+
+nav ul.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Grid Layout for Main Section */
+.grid-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+/* Content */
+.content {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Cards - Flexbox layout */
+.cards {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.card {
+  flex: 1 1 150px;
+  background-color: #e3e3e3;
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  background-color: blanchedalmond;
+  color: black;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 6px;
+}
+
+/* === Responsive Design === */
+
+/* Tablet view */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    justify-content: space-around;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav ul.nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+}
